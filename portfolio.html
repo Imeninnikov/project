@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Илья Именинников</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            text-align: center;
+            color: white; /* Цвет текста будет белым */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: white; /* Цвет текста будет белым */
+        }
+
+        section {
+            padding: 20px;
+            background-color: #333; /* Темный фон */
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #education,
+        #skills,
+        #experience,
+        #contacts {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white; /* Цвет текста будет белым */
+        }
+
+        #experience ol,
+        #skills ol,
+        #education ol {
+            list-style-type: none;
+            counter-reset: my-awesome-counter;
+            padding: 0;
+        }
+
+        #experience ol li,
+        #skills ol li,
+        #education ol li {
+            counter-increment: my-awesome-counter;
+            margin-bottom: 10px;
+            position: relative;
+            color: white; /* Цвет текста будет белым */
+        }
+
+        #experience ol li::before,
+        #skills ol li::before,
+        #education ol li::before {
+            content: counter(my-awesome-counter);
+            color: #333;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            line-height: 25px;
+            text-align: center;
+            position: absolute;
+            left: -40px;
+            top: 0;
+            font-size: 1.2em;
+            transition: transform 0.3s ease-in-out; /* Добавленная анимация */
+        }
+
+        #contacts {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #contacts p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        #portfolio-link,
+        #return-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+
+        #portfolio-link:hover,
+        #return-button:hover {
+            background-color: #555;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Портфолио</h1>
+    </header>
+
+    <section id="education">
+        <h2>Образование</h2>
+        <p>Учебные заведения:</p>
+        <ol>
+            <li>Школа №1715 2009-2011</li>
+            <li>Гимназия №1534 2012-2018</li>
+            <li>Школа №625 2018-2020</li>
+            <li>РГУ нефти и газа имени И.М. Губкина 2020-2022</li>
+            <li>Национальный Исследовательский Технологичесий Университет "Московский Институт Стали и Сплавов" 2022-2024</li>
+        </ol>
+    </section>
+
+    <section id="skills">
+        <h2>Умения</h2>
+        <ol>
+            <li>Сборка компьютерного, серверного оборудования, а также Системы Хранения Данных;</li>
+            <li>Тестирование компьютерного оборудования на наличие ошибок;</li>
+            <li>Установка ОС Simply Linux на ARM-процессор Байкал, а также написание скрипта для нагрузочного тестирования под эту архитектуру процессора;</li>
+            <li>Установка системы мониторинга для Центра Обработки Данных;</li>
+        </ol>
+    </section>
+
+    <section id="experience">
+        <h2>Опыт работы</h2>
+        <ol>
+            <li>Центр профессиональной навигации и приема. Сотрудник приемной комиссии НИТУ «МИСиС»;</li>
+            <li>Инженер внедрения в компании ООО «Галард» С 1 июня 2023 года по 3 октября 2023 года включительно ;</li>
+            <li>Инженер в компании ПК "Аквариус" с 5 октября 2023 года по настоящее время;</li>
+        </ol>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>Рабочая почта: IlyaImeninnikov1@gmail.com</p>
+        <p>Телефон для связи: +7 (916) 252-33-74</p>
+    </section>
+
+    <a href="index.html" id="return-button">Вернуться на главную</a>
+
+</body>
+</html>
