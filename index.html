@@ -10,12 +10,13 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(45deg, #3498db, #2ecc71);
-            color: white;
-            text-align: center;
+            color: rgb(255, 255, 255);
+            text-align: justify; /* Основной текст выровнен по ширине */
         }
 
         header {
             padding: 50px 0;
+            text-align: center; /* Заголовок выровнен по центру */
         }
 
         h1 {
@@ -49,17 +50,16 @@
 
         section {
             padding: 50px 0;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         #about-me {
-            background-color: #333;
+            background-color: #166b60;
             color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         #about-me h2 {
@@ -84,16 +84,17 @@
 
     <header>
         <h1>Добро пожаловать!</h1>
-        <p>Илья Именинников - студент группы БИСТ-20-3, инженер</p>
     </header>
 
     <section id="about-me">
-        <h2>Обо мне</h2>
-        <p> Добрый день! Меня зовут Илья Именинников, и я студент НИТУ "МИИС". Я увлечен технологиями и компьютерами, что побудило меня создать портфолио, демонстрирующее мои навыки в области информационных технологий. Я готов поделиться своим опытом и знаниями в IT с Вами.</p>
+        <h2 style="text-align: center;">Обо мне</h2>
+        <p style="text-align: center;"> Добрый день! Меня зовут Илья Именинников, и я студент группы БИСТ-20-3 университета НИТУ "МИСИС". Я увлечен технологиями и компьютерами, что побудило меня создать портфолио, демонстрирующее мои навыки в области информационных технологий. Я готов поделиться своим опытом и знаниями в IT с Вами.</p>
         <img src="./image1.jpg"> 
     </section>
 
-    <a href="portfolio.html" id="portfolio-link">Мое портфолио</a>
+    <div style="text-align: center;">
+        <a href="portfolio.html" id="portfolio-link">Мое портфолио</a>
+    </div>
 
 </body>
 </html>
