@@ -10,89 +10,87 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(45deg, #3498db, #2ecc71);
-            text-align: center;
             color: white; /* Цвет текста будет белым */
         }
 
         header {
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
-            padding: 0px;
+            background-color: #166b60;
+            padding: 50px 0;
         }
 
         h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 3em;
+            text-align: center;
         }
 
         p {
             margin: 10px 0;
             font-size: 1.2em;
-            color: white; /* Цвет текста будет белым */
         }
 
         section {
             padding: 20px;
-            background-color: #166b60;; /* Темный фон */
-            margin: 20px;
+            background-color: #166b60; /* Темный фон */
+            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
-            transition: transform 0.3s ease-in-out;
-            position: relative; /* Добавлено для корректного позиционирования */
+            max-width: 800px;
         }
 
         #education,
         #skills,
         #experience,
-        #contacts {
+        #contacts,
+        #certificates {
             font-weight: bold;
             margin-bottom: 20px;
-            color: white; /* Цвет текста будет белым */
         }
 
         #education > ol,
         #skills > ol,
-        #experience > ol {
+        #experience > ol,
+        #certificates > ol {
             list-style-type: none;
             counter-reset: my-awesome-counter;
             padding: 0;
-            position: relative; /* Добавлено для корректного позиционирования */
+            position: relative;
         }
 
         #education > ol > li,
         #skills > ol > li,
-        #experience > ol > li {
+        #experience > ol > li,
+        #certificates > ol > li {
             counter-increment: my-awesome-counter;
             margin-bottom: 10px;
             position: relative;
-            color: white; /* Цвет текста будет белым */
             padding-left: 20px;
         }
 
         #education > ol > li::before,
         #skills > ol > li::before,
-        #experience > ol > li::before {
+        #experience > ol > li::before,
+        #certificates > ol > li::before {
             content: counter(my-awesome-counter);
-            color: #333;
-            background-color: #fff;
+            color: rgb(0, 0, 0); /* Задаем цвет для нумерации */
+            background-color: #7cb191; /* Задаем цвет фона для нумерации */
             border: 2px solid #ffffff;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
+            border-radius: 40%;
+            width: 15px;
+            height: 15px;
             display: inline-block;
-            line-height: 25px;
+            line-height: 15px;
             text-align: center;
             position: absolute;
-            left: -0.4cm; /* Подвигаем нумерацию вправо на пол сантиметра */
+            left: -0.5em; /* Подвигаем нумерацию влево */
             top: 0;
-            font-size: 1.2em;
-            transition: transform 0.3s ease-in-out; /* Добавленная анимация */
+            font-size: 0.8em; /* Задаем размер нумерации */
+            transition: transform 0.3s ease-in-out;
         }
 
         #contacts {
-            background-color: #166b60;;
-            color: white;
+            background-color: #166b60;
         }
 
         #contacts p {
@@ -100,21 +98,31 @@
             margin: 15px 0;
         }
 
-        #portfolio-link,
         #return-button {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
+            padding: 10px 20px; /* Уменьшаем отступы, чтобы кнопка была стандартного размера */
+            background-color: transparent; /* Прозрачный фон */
+            color: white; /* Цвет текста */
             text-decoration: none;
+            border: 2px solid white; /* Белая рамка */
             border-radius: 5px;
             margin-top: 20px;
             cursor: pointer;
             font-size: 1.2em;
-            margin-right: 20px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background-color 0.3s, color 0.3s; /* Анимация при наведении */
         }
 
-        #portfolio-link:hover,
+        #return-button:hover {
+            background-color: white; /* Изменение фона при наведении */
+            color: black; /* Изменение цвета текста при наведении */
+        }
+
+
+
+
         #return-button:hover {
             background-color: #555;
         }
@@ -136,7 +144,7 @@
     <ol>
         <li>Школа №1715 2009-2011</li>
         <li>Гимназия №1534 2012-2018</li>
-        <li>Школа №625 2018-2020</li>
+        <li>Гимназия №625 2018-2020</li>
         <li>РГУ нефти и газа имени И.М. Губкина 2020-2022</li>
         <li>Национальный Исследовательский Технологичесий Университет "Московский Институт Стали и Сплавов" 2022-2024</li>
     </ol>
@@ -145,8 +153,8 @@
 <section id="skills">
     <h2>Умения</h2>
     <ol>
-        <li>Сборка компьютерных и серверных систем, а также хранилищ данных.</li>
-        <li>Проведение тестирования компьютерного и серверного оборудования на выявление ошибок.</li>
+        <li>Сборка, а также устранение неисправностей в компьютерных, серверных системах и системах хранения данных.</li>
+        <li>Выполнение тестирования и автоматизированного тестирования компьютерного и серверного оборудования для выявления потенциальных проблем и ошибок.</li>
         <li>Установка операционной системы Simply Linux на ARM-процессор Байкал, а также разработка скриптов для
             нагрузочного тестирования данной архитектуры процессора.
         </li>
@@ -166,6 +174,15 @@
         <li>Центр профессиональной навигации и приема. Сотрудник приемной комиссии НИТУ «МИСиС»;</li>
         <li>Инженер внедрения в компании ООО «Галард» С 1 июня 2023 года по 3 октября 2023 года включительно ;</li>
         <li>Инженер в компании ПК "Аквариус" с 5 октября 2023 года по настоящее время;</li>
+    </ol>
+</section>
+
+<section id="certificates"> 
+    <h2>Сертификаты и дипломы</h2>
+    <ol>
+        <li>Git. Базовый уровень Geekbrains</li>
+        <li>Администрирование Windows Server 2016</li>
+        <li>Сетевые технологии для системных администраторов</li>
     </ol>
 </section>
 
